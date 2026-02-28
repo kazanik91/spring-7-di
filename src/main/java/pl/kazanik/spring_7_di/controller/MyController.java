@@ -5,6 +5,8 @@
 package pl.kazanik.spring_7_di.controller;
 
 import org.springframework.stereotype.Controller;
+import pl.kazanik.spring_7_di.service.GreetingService;
+import pl.kazanik.spring_7_di.service.GreetingServiceImpl;
 
 /**
  *
@@ -13,8 +15,14 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class MyController {
     
+    private final GreetingService greetingService;
+
+    public MyController() {
+        this.greetingService = new GreetingServiceImpl();
+    }
+    
     public String sayHello() {
         System.out.println("I am in controller.");
-        return "Hello World!";
+        return this.greetingService.sayHello();
     }
 }
