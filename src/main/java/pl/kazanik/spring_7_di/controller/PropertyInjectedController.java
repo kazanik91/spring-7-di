@@ -5,6 +5,7 @@
 package pl.kazanik.spring_7_di.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import pl.kazanik.spring_7_di.service.GreetingService;
 
@@ -15,6 +16,7 @@ import pl.kazanik.spring_7_di.service.GreetingService;
 @Controller
 public class PropertyInjectedController {
     
+    @Qualifier("greetingProperty")
     @Autowired
     GreetingService greetingService;
     

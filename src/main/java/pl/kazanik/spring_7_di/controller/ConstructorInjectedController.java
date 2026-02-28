@@ -4,6 +4,7 @@
  */
 package pl.kazanik.spring_7_di.controller;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import pl.kazanik.spring_7_di.service.GreetingService;
 
@@ -16,7 +17,7 @@ public class ConstructorInjectedController {
     
     private final GreetingService greetingService;
 
-    public ConstructorInjectedController(GreetingService greetingService) {
+    public ConstructorInjectedController(@Qualifier("greetingServiceImpl") GreetingService greetingService) {
         this.greetingService = greetingService;
     }
     
