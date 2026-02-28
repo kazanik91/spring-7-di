@@ -4,7 +4,6 @@
  */
 package pl.kazanik.spring_7_di.service.i18n;
 
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import pl.kazanik.spring_7_di.service.GreetingService;
@@ -13,7 +12,7 @@ import pl.kazanik.spring_7_di.service.GreetingService;
  *
  * @author miron.maksymiuk
  */
-@Profile("EN")
+@Profile(value = {"EN"})
 @Service("i18NService")
 public class EnglishGreetingService implements GreetingService {
 
