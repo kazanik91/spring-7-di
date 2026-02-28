@@ -4,10 +4,13 @@
  */
 package pl.kazanik.spring_7_di.service;
 
+import org.springframework.stereotype.Service;
+
 /**
  *
  * @author miron.maksymiuk
  */
+@Service
 public class GreetingServiceImpl implements GreetingService {
 
     @Override

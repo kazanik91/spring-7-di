@@ -4,23 +4,25 @@
  */
 package pl.kazanik.spring_7_di.controller;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import pl.kazanik.spring_7_di.service.GreetingServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
 /**
  *
  * @author miron.maksymiuk
  */
+@SpringBootTest
 public class PropertyInjectedControllerTest {
     
+    @Autowired
     private PropertyInjectedController propertyController;
     
-    @BeforeEach
-    public void setUp() {
-        this.propertyController = new PropertyInjectedController();
-        this.propertyController.greetingService = new GreetingServiceImpl();
-    }
+//    @BeforeEach
+//    public void setUp() {
+//        this.propertyController = new PropertyInjectedController();
+//        this.propertyController.greetingService = new GreetingServiceImpl();
+//    }
 
     /**
      * Test of sayHello method, of class PropertyInjectedController.

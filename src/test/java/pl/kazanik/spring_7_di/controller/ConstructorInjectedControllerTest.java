@@ -4,22 +4,24 @@
  */
 package pl.kazanik.spring_7_di.controller;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import pl.kazanik.spring_7_di.service.GreetingServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
 /**
  *
  * @author miron.maksymiuk
  */
+@SpringBootTest
 public class ConstructorInjectedControllerTest {
     
+    @Autowired
     private ConstructorInjectedController constructorController;
     
-    @BeforeEach
-    public void setUp() {
-        this.constructorController = new ConstructorInjectedController(new GreetingServiceImpl());
-    }
+//    @BeforeEach
+//    public void setUp() {
+//        this.constructorController = new ConstructorInjectedController(new GreetingServiceImpl());
+//    }
 
     /**
      * Test of sayHello method, of class ConstructorInjectedController.

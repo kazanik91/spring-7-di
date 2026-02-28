@@ -4,12 +4,14 @@
  */
 package pl.kazanik.spring_7_di.controller;
 
+import org.springframework.stereotype.Controller;
 import pl.kazanik.spring_7_di.service.GreetingService;
 
 /**
  *
  * @author miron.maksymiuk
  */
+@Controller
 public class ConstructorInjectedController {
     
     private final GreetingService greetingService;
