@@ -12,7 +12,7 @@ import pl.kazanik.spring_7_di.service.GreetingService;
  *
  * @author miron.maksymiuk
  */
-@Profile(value = {"EN"})
+@Profile({"EN"})
 @Service("i18NService")
 public class EnglishGreetingService implements GreetingService {
 

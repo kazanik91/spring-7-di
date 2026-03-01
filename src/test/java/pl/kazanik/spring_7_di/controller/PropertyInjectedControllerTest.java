@@ -7,11 +7,13 @@ package pl.kazanik.spring_7_di.controller;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 
 /**
  *
  * @author miron.maksymiuk
  */
+@ActiveProfiles({"ES", "DEV"})
 @SpringBootTest
 public class PropertyInjectedControllerTest {
     

@@ -13,7 +13,7 @@ import org.springframework.test.context.ActiveProfiles;
  *
  * @author miron.maksymiuk
  */
-@ActiveProfiles("EN")
+@ActiveProfiles({"EN", "DEV"})
 @SpringBootTest
 public class MyI18NControllerENTest {
     

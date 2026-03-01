@@ -2,9 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
  */
-package pl.kazanik.spring_7_di.controller;
+package pl.kazanik.spring_7_di.task4.controller;
 
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
@@ -13,24 +14,22 @@ import org.springframework.test.context.ActiveProfiles;
  *
  * @author miron.maksymiuk
  */
-@ActiveProfiles({"ES", "DEV"})
+@ActiveProfiles({"PROD", "ES"})
 @SpringBootTest
-public class ConstructorInjectedControllerTest {
+public class EnvControllerProdTest {
     
     @Autowired
-    private ConstructorInjectedController constructorController;
-    
-//    @BeforeEach
-//    public void setUp() {
-//        this.constructorController = new ConstructorInjectedController(new GreetingServiceImpl());
-//    }
+    private EnvController controller;
 
     /**
-     * Test of sayHello method, of class ConstructorInjectedController.
+     * Test of getEnvironment method, of class EnvController.
      */
     @Test
-    public void testSayHello() {
-        System.out.println(this.constructorController.sayHello());
+    public void testGetEnvironment() {
+        System.out.println("prod test");
+        String expResult = "prod";
+        String result = this.controller.getEnvironment();
+        assertEquals(expResult, result);
     }
     
 }
